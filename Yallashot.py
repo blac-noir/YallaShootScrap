@@ -20,20 +20,20 @@ def fetch_and_save_content():
 
     # Save the modified HTML content to a file
     with open(
-        "C:\\Users\\MOHAMED AMINE\\Documents\\VSCode Projects\\Python\\SCRAP\\templates\\modified_page.html",
+        "index.html",
         "w",
         encoding="utf-8",
     ) as file:
         file.write(str(soup.prettify()))
 
     # Print a message indicating that the file has been saved
-    print("Modified HTML content has been saved to 'modified_page.html'")
+    print("Modified HTML content has been saved to 'index.html'")
 
 
 @app.route("/")
 def index():
     fetch_and_save_content()
-    return render_template("modified_page.html")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
